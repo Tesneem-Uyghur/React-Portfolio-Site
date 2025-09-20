@@ -1,21 +1,32 @@
 import "./About.css";
+import tesneem from "../assets/tesneem.png";
 
 export default function About() {
   return (
     <section id="about" className="about">
       <div className="about-content">
-        <div className="about-header">
+        <div className="about-top-card">
+           <div className="about-header">
           <h1>
             <span className="gradient-text">About Me</span>
           </h1>
           <p className="about-subtitle">
-            Junior Full-Stack Developer with a Quality-First Mindset
+            I’m Tesneem, an AI & Software Engineering student with a passion for building clean,
+             scalable, and user-friendly applications. My journey into tech is fueled by curiosity
+             and a love for solving problems through code. With growing skills in React, JavaScript,
+             Python, C#, and SQL, I enjoy crafting solutions that balance creativity and functionality.
+             My goal is to continue learning, exploring full-stack development,
+             and contributing to impactful projects that make technology more accessible and meaningful.
           </p>
+        </div>
+         <div className="about-image">
+                <img src={tesneem} alt="tesneem" />
+              </div>
+
         </div>
 
         <div className="about-grid">
           <div className="about-card">
-            <div className="card-icon">🚀</div>
             <h3>My Journey</h3>
             <p>
               From <span className="highlight">QA Engineer</span> to <span className="highlight">Full-Stack Developer</span> - 
@@ -24,7 +35,6 @@ export default function About() {
           </div>
 
           <div className="about-card">
-            <div className="card-icon">💻</div>
             <h3>What I Do</h3>
             <p>
               I build robust web applications with modern technologies, ensuring quality through my 
@@ -39,7 +49,6 @@ export default function About() {
           </div>
 
           <div className="about-card">
-            <div className="card-icon">🎯</div>
             <h3>My Approach</h3>
             <p>
               I don't just write code - I write <span className="highlight">tested, reliable code</span>. 
@@ -47,31 +56,9 @@ export default function About() {
             </p>
           </div>
 
-          <div className="about-card">
-            <div className="card-icon">🌟</div>
-            <h3>Beyond Code</h3>
-            <p>
-              When I'm not coding, I volunteer as a <span class="highlight">language teacher</span>, 
-              helping preserve cultural heritage while developing my mentoring skills.
-            </p>
-          </div>
+      
         </div>
-
-        <div className="about-cta">
-          <h2>Let's Build Something Amazing Together</h2>
-          <div className="social-icons">
-            <a href="mailto:tawuti@my.centennialcollege.ca" target="_blank" rel="noreferrer">
-              <i className="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/tesneem-awut" target="_blank" rel="noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">
-              <i className="fab fa-github"></i>
-            </a>
-            <button className="contact-btn">Get In Touch</button>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

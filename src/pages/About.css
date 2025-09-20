@@ -1,11 +1,12 @@
 /* About Section - Single Page Portfolio */
 .about {
-  min-height: 100vh;
+  min-height: vh;
   display: flex;
   align-items: center;
-  padding: 5rem 5% 2rem;
-  background: #0a0a0a;
-  color: #ccd6f6;
+  padding: 2em 5% 2rem;
+  background:  #fffaf6;
+  color: #dd024b;
+  font-family: Arial, sans-serif;
 }
 
 .about-content {
@@ -14,16 +15,48 @@
   margin: 0 auto;
 }
 
-.about-header {
-  text-align: center;
-  margin-bottom: 3rem;
+.about-top-card {
+  display: flex;                  
+  align-items: center;            
+  gap: 2rem;                      
+  background: rgba(238, 225, 225, 0.945);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-align: left;  /* text left instead of center */
 }
 
+.about-top-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #4ecdc4;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.about-header {
+  flex: 1;
+  text-align: left;
+}
+
+.about-image img {
+  width: 250px;    
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;  /* use 50% for circle */
+}
+
+
+
 .about-header h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  margin-top: 1px;
+  line-height: 1.4;
+  text-align: center;
+ 
 }
 
 .gradient-text {
@@ -42,9 +75,10 @@
 
 .about-subtitle {
   font-size: 1.2rem;
-  color: #8892b0;
+  color: #01081b;
   margin-bottom: 0;
   font-weight: 300;
+  line-height: 1.6;
 }
 
 .about-grid {
@@ -52,10 +86,11 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 .about-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(246, 233, 233, 0.945);
   padding: 2rem;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);

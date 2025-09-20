@@ -16,8 +16,6 @@ export default function Home() {
 
         </p>
 
-       
-
         <div className="social-icons">
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">
             <i className="fab fa-linkedin"></i>
