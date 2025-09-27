@@ -1,12 +1,12 @@
-/* About Section - Single Page Portfolio */
+/* About Section - Fully Responsive */
 .about {
-  min-height: vh;
   display: flex;
   align-items: center;
-  padding: 2em 5% 2rem;
-  background:  #fffaf6;
+  padding: clamp(1rem, 4vw, 5rem) clamp(3%, 5vw, 5%) clamp(0.5rem, 2vw, 3rem);
+  background: #fffaf6;
   color: #dd024b;
   font-family: Arial, sans-serif;
+  min-height: 100vh;
 }
 
 .about-content {
@@ -16,16 +16,17 @@
 }
 
 .about-top-card {
-  display: flex;                  
-  align-items: center;            
-  gap: 2rem;                      
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 2rem);
   background: rgba(238, 225, 225, 0.945);
-  padding: 2rem;
+  padding: clamp(1.5rem, 2vw, 1rem);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  text-align: left;  /* text left instead of center */
+  text-align: left;
+  flex-wrap: wrap;
 }
 
 .about-top-card:hover {
@@ -38,25 +39,35 @@
 .about-header {
   flex: 1;
   text-align: left;
+  min-width: 280px;
+}
+
+.about-image {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-image img {
-  width: 250px;    
-  height: 250px;
+  width: clamp(150px, 25vw, 250px);
+  height: clamp(150px, 25vw, 250px);
   object-fit: cover;
-  border-radius: 10px;  /* use 50% for circle */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-
+.about-image img:hover {
+  transform: scale(1.05);
+}
 
 .about-header h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 1px;
   line-height: 1.4;
   text-align: center;
- 
 }
 
 .gradient-text {
@@ -69,13 +80,17 @@
 }
 
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
 }
 
 .about-subtitle {
-  font-size: 1.2rem;
-  color: #01081b;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  color: #4f608f;
   margin-bottom: 0;
   font-weight: 300;
   line-height: 1.6;
@@ -83,15 +98,15 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-  padding-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
 }
 
 .about-card {
   background: rgba(246, 233, 233, 0.945);
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 2rem);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -107,23 +122,23 @@
 }
 
 .card-icon {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   margin-bottom: 1rem;
   display: block;
 }
 
 .about-card h3 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   font-weight: 600;
-  color: #ccd6f6;
-  margin-bottom: 1rem;
+  color: #455a98;
+  margin: 0.2rem 0;
 }
 
 .about-card p {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.6;
   color: #8892b0;
-  margin-bottom: 1rem;
+  margin: 0.3rem 0;
 }
 
 .highlight {
@@ -145,22 +160,23 @@
 .tech-tag {
   background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
   color: white;
-  padding: 0.3rem 0.8rem;
+  padding: clamp(0.25rem, 1vw, 0.3rem) clamp(0.6rem, 2vw, 0.8rem);
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .about-cta {
   text-align: center;
   background: rgba(255, 255, 255, 0.05);
-  padding: 2.5rem 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .about-cta h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: #ccd6f6;
   margin-bottom: 2rem;
   font-weight: 600;
@@ -170,7 +186,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: clamp(0.8rem, 2.5vw, 1.5rem);
   flex-wrap: wrap;
 }
 
@@ -178,13 +194,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: clamp(40px, 8vw, 50px);
+  height: clamp(40px, 8vw, 50px);
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   color: #ccd6f6;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   transition: all 0.3s ease;
   text-decoration: none;
 }
@@ -197,12 +213,12 @@
 }
 
 .contact-btn {
-  padding: 0.8rem 2rem;
+  padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.5rem, 3vw, 2rem);
   background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
   color: white;
   border: none;
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -215,18 +231,102 @@
   box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
 }
 
-/* Responsive Design */
+.cv-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: clamp(0.5rem, 2vw, 0.7rem) clamp(1rem, 2.5vw, 1.5rem);
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cv-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design - Mobile First Approach */
+
+/* Extra small devices (phones, 320px and up) */
+@media (max-width: 320px) {
+  .about {
+    padding: 1rem 2% 1rem;
+  }
+  
+  .about-top-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .about-header {
+    text-align: center;
+    min-width: auto;
+  }
+  
+  .about-image img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .tech-stack {
+    gap: 0.3rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* Small devices (landscape phones, 480px and up) */
+@media (max-width: 480px) {
+  .about {
+    padding: 1.5rem 3% 1.5rem;
+  }
+  
+  .about-top-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .about-header {
+    text-align: center;
+    min-width: auto;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .social-icons {
+    gap: 0.8rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
   .about {
-    padding: 3rem 3% 2rem;
+    padding: 2rem 3% 2rem;
   }
   
-  .about-header h1 {
-    font-size: 2.2rem;
+  .about-top-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
   }
   
-  .about-subtitle {
-    font-size: 1rem;
+  .about-header {
+    text-align: center;
+    min-width: auto;
   }
   
   .about-grid {
@@ -243,25 +343,72 @@
     padding: 2rem 1rem;
   }
   
-  .about-cta h2 {
-    font-size: 1.5rem;
-  }
-  
   .social-icons {
     gap: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  .about-header h1 {
-    font-size: 1.8rem;
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .about-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
   
-  .about-card h3 {
-    font-size: 1.1rem;
+  .about-top-card {
+    flex-direction: row;
   }
   
-  .about-card p {
-    font-size: 0.9rem;
+  .about-header {
+    text-align: left;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .about {
+    padding: 5rem 5% 3rem;
+  }
+  
+  .about-top-card {
+    padding: 3.5rem;
+  }
+  
+  .about-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1400px) {
+  .about-content {
+    max-width: 1400px;
+  }
+}
+
+/* Focus states for accessibility */
+.cv-link:focus,
+.contact-btn:focus,
+.social-icons a:focus {
+  outline: 2px solid #4ecdc4;
+  outline-offset: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text {
+    animation: none;
+  }
+  
+  .about-top-card:hover,
+  .about-card:hover,
+  .cv-link:hover,
+  .contact-btn:hover,
+  .social-icons a:hover,
+  .about-image img:hover {
+    transform: none;
+  }
+  
+  * {
+    transition: none !important;
   }
 }

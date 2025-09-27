@@ -24,7 +24,11 @@ export default function Home() {
             <i className="fab fa-github"></i>
           </a>
 
-          <button className="contact-btn">Hire Me</button>
+           <a href="mailto:tawuti@my.centennialcollege.ca">
+                  <button className="contact-btn">Hire Me</button>
+                </a>
+
+          
         </div>
       </div>
 

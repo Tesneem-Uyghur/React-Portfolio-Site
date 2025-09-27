@@ -1,8 +1,6 @@
 /* Services.css - Services Page Styling */
 .services {
-  min-height: 100vh;
-  padding: 5rem 5% 2rem;
-  background: #0a0a0a;
+  padding: 0.5rem 3% 0.25rem;
   color: #ccd6f6;
 }
 
@@ -14,7 +12,8 @@
 
 .services-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  
 }
 
 .services-header h1 {
@@ -40,8 +39,9 @@
 
 .services-subtitle {
   font-size: 1.2rem;
-  color: #8892b0;
+  color: #394c83;
   font-weight: 300;
+  margin-bottom: 2.8rem;
 }
 
 .services-grid {
@@ -52,7 +52,7 @@
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(238, 225, 225, 0.945);
   padding: 2rem;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -80,12 +80,12 @@
 .service-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #ccd6f6;
+  color: #435796;
   margin-bottom: 1rem;
 }
 
 .service-description {
-  color: #8892b0;
+  color: #707eaa;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -230,6 +230,7 @@
   .services-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+   
   }
 
   .service-card {

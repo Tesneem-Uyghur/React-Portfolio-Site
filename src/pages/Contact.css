@@ -1,8 +1,7 @@
 /* Contact.css - Contact Page Styling */
 .contact {
   min-height: 100vh;
-  padding: 5rem 5% 2rem;
-  background: #0a0a0a;
+  padding: 2rem 3% 1rem;
   color: #ccd6f6;
 }
 
@@ -14,7 +13,10 @@
 
 .contact-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-top: 0rem;
+
 }
 
 .contact-header h1 {
@@ -22,6 +24,7 @@
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
+
 }
 
 .gradient-text {
@@ -40,15 +43,16 @@
 
 .contact-subtitle {
   font-size: 1.2rem;
-  color: #8892b0;
+  color: #445790;
   font-weight: 300;
+  
 }
 
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 3rem;
-  margin-bottom: 4rem;
+  align-items: stretch /* makes header and form line up */
 }
 
 /* Contact Information Panel */
@@ -64,6 +68,11 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* ⬅️ pushes first to top, last to bottom */
+  height: 100%;
 }
 
 .contact-panel h2 {
@@ -88,14 +97,14 @@
 }
 
 .info-item h4 {
-  color: #ccd6f6;
+  color: #90a0d0;
   font-size: 1rem;
   margin-bottom: 0.3rem;
   font-weight: 600;
 }
 
 .info-item p {
-  color: #8892b0;
+  color: #828eb4;
   font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
@@ -105,12 +114,16 @@
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;   /* vertical alignment */
+  gap: 1rem;            
 }
 
 .social-links h4 {
   color: #ccd6f6;
   margin-bottom: 1rem;
   font-weight: 600;
+    margin: 0;    
 }
 
 .social-icons {
@@ -144,28 +157,43 @@
 .contact-form-section {
   display: flex;
   align-items: flex-start;
+  
 }
 
 .form-container {
-  background: rgba(255, 255, 255, 0.05);
   padding: 2.5rem;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   width: 100%;
+  max-width: 1000px;
+  background: rgba(238, 225, 225, 0.945);
+  margin-top: 3rem;
+  transition: all 0.3s ease; 
+
+}
+
+.form-container:hover{
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #4ecdc4;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
 }
 
 .form-container h2 {
   font-size: 1.5rem;
-  color: #ccd6f6;
+  color: #142457;
   margin-bottom: 2rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  
 }
 
 .form-row {
@@ -177,10 +205,11 @@
 .form-group {
   display: flex;
   flex-direction: column;
+  
 }
 
 .form-group label {
-  color: #ccd6f6;
+  color: #2a3457;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -188,11 +217,11 @@
 
 .form-group input,
 .form-group textarea {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(76, 27, 27, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 0.8rem;
-  color: #ccd6f6;
+  color: #4a5faa;
   font-size: 0.9rem;
   transition: all 0.3s ease;
 }

@@ -37,43 +37,7 @@ export default function Services() {
         "Database Design",
         "Code Review & Optimization"
       ]
-    },
-    {
-      id: 4,
-      icon: "🚀",
-      title: "DevOps & Deployment",
-      description: "Cloud deployment and DevOps practices including CI/CD pipelines, version control, and cloud hosting solutions for scalable applications.",
-      features: [
-        "CI/CD Pipeline Setup",
-        "Cloud Hosting (AWS, Azure)",
-        "Version Control (Git)",
-        "Application Monitoring"
-      ]
-    },
-    {
-      id: 5,
-      icon: "🎯",
-      title: "Consulting & Code Review",
-      description: "Technical consulting and code review services. Help optimize existing applications, implement best practices, and improve code quality.",
-      features: [
-        "Code Quality Assessment",
-        "Performance Optimization",
-        "Best Practices Implementation",
-        "Technical Documentation"
-      ]
-    },
-    {
-      id: 6,
-      icon: "🎓",
-      title: "Training & Mentoring",
-      description: "Knowledge sharing through training sessions and mentoring. Experience in teaching technical concepts and helping others grow their skills.",
-      features: [
-        "Technical Training Sessions",
-        "Code Mentoring",
-        "Best Practices Workshops",
-        "Career Guidance"
-      ]
-    }
+    },  
   ];
 
   return (
@@ -112,21 +76,6 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="services-cta">
-          <div className="cta-content">
-            <h2>Ready to Start Your Project?</h2>
-            <p>
-              Let's discuss how I can help bring your ideas to life with quality-driven development 
-              and thorough testing practices.
-            </p>
-            <div className="cta-buttons">
-              <a href="/contact" className="cta-btn primary">Get Started</a>
-              <a href="mailto:tawuti@my.centennialcollege.ca" className="cta-btn secondary">
-                Send Message
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

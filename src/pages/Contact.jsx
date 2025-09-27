@@ -49,8 +49,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact" id="contact">
-      <div className="contact-content">
+<section className="contact" id="contact">
+  <div className="contact-content">
+    <div className="contact-container">
+      {/* Left side: header + info */}
+      <div className="contact-left">
         <div className="contact-header">
           <h1>
             <span className="gradient-text">Get In Touch</span>
@@ -60,67 +63,60 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="contact-container">
-          {/* Contact Information Panel */}
-          <div className="contact-info">
-            <div className="contact-panel">
-              <h2>Contact Information</h2>
-              <div className="info-item">
-                <i className="fas fa-user"></i>
-                <div>
-                  <h4>Name</h4>
-                  <p>Tesneem Awuti</p>
-                </div>
+        <div className="contact-info">
+          <div className="contact-panel">
+            {/* Email */}
+            <div className="info-item">
+              <i className="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>tawuti@my.centennialcollege.ca</p>
               </div>
-              
-              <div className="info-item">
-                <i className="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p>tawuti@my.centennialcollege.ca</p>
-                </div>
+            </div>
+            {/* Phone */}
+            <div className="info-item">
+              <i className="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>647-448-6987</p>
               </div>
-              
-              <div className="info-item">
-                <i className="fas fa-phone"></i>
-                <div>
-                  <h4>Phone</h4>
-                  <p>647-448-6720</p>
-                </div>
+            </div>
+            {/* Location */}
+            <div className="info-item">
+              <i className="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Toronto, ON, Canada</p>
               </div>
-              
-              <div className="info-item">
-                <i className="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Location</h4>
-                  <p>Toronto, ON, Canada</p>
-                </div>
+            </div>
+            {/* Currently */}
+            <div className="info-item">
+              <i className="fas fa-graduation-cap"></i>
+              <div>
+                <h4>Currently</h4>
+                <p>
+                  AI & Software Engineering Student <br /> Centennial College
+                </p>
               </div>
-              
-              <div className="info-item">
-                <i className="fas fa-graduation-cap"></i>
-                <div>
-                  <h4>Currently</h4>
-                  <p>AI & Software Engineering Student<br />Centennial College</p>
-                </div>
-              </div>
-
-              <div className="social-links">
-                <h4>Connect With Me</h4>
-                <div className="social-icons">
-                  <a href="https://www.linkedin.com/in/tesneem-awut" target="_blank" rel="noreferrer">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                  <a href="https://github.com" target="_blank" rel="noreferrer">
-                    <i className="fab fa-github"></i>
-                  </a>
-                  <a href="mailto:tawuti@my.centennialcollege.ca">
-                    <i className="fas fa-envelope"></i>
-                  </a>
-                </div>
+            </div>
+            {/* Social links */}
+            <div className="social-links">
+              <h4>Connect With Me</h4>
+              <div className="social-icons">
+                <a href="https://www.linkedin.com/in/tesneem-awut" target="_blank" rel="noreferrer">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noreferrer">
+                  <i className="fab fa-github"></i>
+                </a>
+                <a href="mailto:tawuti@my.centennialcollege.ca">
+                  <i className="fas fa-envelope"></i>
+                </a>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
           {/* Contact Form */}
           <div className="contact-form-section">
@@ -210,26 +206,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Additional Contact Section */}
-        <div className="additional-info">
-          <div className="response-time">
-            <i className="fas fa-clock"></i>
-            <h3>Quick Response</h3>
-            <p>I typically respond to messages within 24 hours during business days.</p>
-          </div>
-          
-          <div className="availability">
-            <i className="fas fa-calendar-check"></i>
-            <h3>Availability</h3>
-            <p>Open to new opportunities including co-op placements and full-time positions.</p>
-          </div>
-          
-          <div className="collaboration">
-            <i className="fas fa-handshake"></i>
-            <h3>Collaboration</h3>
-            <p>Always excited to collaborate on interesting projects and learn from others.</p>
-          </div>
-        </div>
+
       </div>
     </section>
   );
