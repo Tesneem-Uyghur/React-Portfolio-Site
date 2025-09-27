@@ -17,16 +17,17 @@ export default function Home() {
         </p>
 
         <div className="social-icons">
+          
+           <a href="mailto:tawuti@my.centennialcollege.ca">
+                  <button className="contact-btn">Hire Me</button>
+                </a>
+
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">
             <i className="fab fa-linkedin"></i>
           </a>
           <a href="https://github.com" target="_blank" rel="noreferrer">
             <i className="fab fa-github"></i>
           </a>
-
-           <a href="mailto:tawuti@my.centennialcollege.ca">
-                  <button className="contact-btn">Hire Me</button>
-                </a>
 
           
         </div>
