@@ -1,7 +1,7 @@
 import "./Home.css"; // Import CSS for styling
 import profilePic from "../assets/profilePic.png";
 
-export default function Home() {
+export default function home() {
   return (
     <section className="home">
       <div className="home-content">
