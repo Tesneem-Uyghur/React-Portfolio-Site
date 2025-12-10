@@ -201,6 +201,78 @@ body {
   }
 }
 
+
+/* Admin Dropdown */
+.admin-dropdown {
+  position: relative;
+}
+
+.admin-dropdown-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.admin-dropdown-btn:hover {
+  background: #f0f0f0;
+  color: #667eea;
+}
+
+.admin-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 10px 0;
+  margin-top: 0; /* Changed from 5px to 0 - NO GAP! */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Show dropdown on hover */
+.admin-dropdown:hover .admin-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Keep dropdown visible when hovering over it */
+.admin-dropdown-content:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.admin-dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.admin-dropdown-content a:hover {
+  background: #f0f0f0;
+  color: #667eea;
+}
+
+/* Mobile dropdown */
+@media (max-width: 1200px) {
+  .admin-dropdown-content {
+    position: static;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+}
 /* Tablet styles */
 @media (max-width: 1024px) and (min-width: 769px) {
   .navbar {

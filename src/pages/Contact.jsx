@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Contact.css";
+import { addContact } from "../api/contactService";
+
 
 export default function Contact() {
   const navigate = useNavigate();
@@ -27,13 +29,12 @@ export default function Contact() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Log form data (since backend isn't required to be fully functional)
+
+  //call backend vis fetch
+  addContact(formData)
+  .then(data => {
     console.log("Contact Form Submitted:", formData);
-    
-    // Show success message (you can replace this with a proper notification)
-    alert("Thank you for your message! I'll get back to you soon.");
-    
+    alert("Thank you! Your message was sent successfully");
     // Reset form
     setFormData({
       firstName: "",
@@ -46,6 +47,11 @@ export default function Contact() {
     
     // Redirect to home page as required by assignment
     navigate("/");
+  })
+  .catch((error) => {
+    console.error("Error submitting contact form:", error);
+    alert("There was an error sending your message. Please try again later.");
+  });
   };
 
   return (
@@ -205,8 +211,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
   );
