@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Contact from './Contact';
-import * as contactService from '../api/contactService';
+import Contact from '../pages/Contact';
+import * as contactService from './contactService';
 
 // Mock the contactService module
 vi.mock('../api/contactService');
