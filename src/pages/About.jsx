@@ -29,7 +29,8 @@ export default function About() {
               I enjoy crafting solutions that balance creativity and functionality.
               My goal is to continue learning, exploring full-stack development,
               and contributing to impactful projects that make technology more accessible
-              and meaningful.
+              and meaningful.I am continuously improving my skills through hands-on projects
+              and real-world problem solving.
             </p>
           </div>
           <div className="about-image">
